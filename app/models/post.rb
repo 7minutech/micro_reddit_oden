@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :user
+  has_many :comments
 
   validates :title, presence: true, length: { minimum: 5, maximum: 150 }
   validates :subtitle, length: { minimum: 5, maximum: 50 }, allow_nil: true
